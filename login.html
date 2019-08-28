@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <title>Login System</title>
+    <link href="{% static "securitySystem/style1.css" %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="login-box">
+        <a href="http://192.168.137.76:8080/login/" class="login">Login</a>
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username">
+        </div>
+
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password">
+        </div>
+
+        <input type="button" class="btn" value="Sign in">
+    </div>
+  </body>
+</html>

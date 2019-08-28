@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<head>
+    {% load static %}
+    <html lang="en">
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</haed>
+<style>
+body {
+background-image: url(https://wallpaperplay.com/walls/full/0/0/c/180436.jpg);
+background-size: cover;
+font-family: "Lato", sans-serif;
+}
+.mySlides {display: none}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.tbody {
+  height: 50px !important;
+  overflow-y: scroll;
+}
+
+.my-tbody {
+  height:30px;
+  display:block;
+  overflow-y:scroll;
+  width:100%;
+}
+
+tbody {
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+}
+
+td {
+  width: 33.33%;
+}
+</style>
+
+<body>
+	<!-- Navbar -->
+	<div class="w3-top">
+		<div class="w3-bar w3-black w3-card">
+			<a href="http://192.168.137.66:8080/home/" class="w3-bar-item w3-button w3-padding-large">
+				<i class="fa fa-home"></i>
+				HOME
+			</a>
+			<a href="http://192.168.137.66:8080/lockmanage/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+				<i class="fa fa-cog"></i>
+				LOCK MANAGEMENT
+			</a>
+			<a href="http://192.168.137.66:8080/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+				<i class="fa fa-phone"></i>
+				CONTACT
+			</a>
+			<a href="http://192.168.137.66:8080/aboutus" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+				<i class="fa fa-user-o"></i>
+				ABOUT US</a>
+		</div>
+	</div>
+
+	<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="screenshot">
+		<h2 class="w3-wide">SCREENSHOTS</h2>
+		<p class="w3-opacity"><i>Most updated screenshots and intruder alerts</i></p>
+		<!-- Page content -->
+		<div class="row">
+			<div class="column">
+				<img id="snapshot" src="http://192.168.137.66:8080/getImage" width="300" height="200">
+				<p> Recently updated </p>
+				<p id="recentTime" class="w3-opacity"> Last Updated: </p>
+			</div>
+			<div class="column">
+				<img id ="intruder0" src="http://192.168.137.66:8080/getIntruderImage/1" width="300" height="200">
+				<p> Last intruder alert </p>
+				<p id="intrudeTime" class="w3-opacity"> Last Updated: </p>
+			</div>
+		</div>
+	</div>
+
+	<div class="w3-black" id="log">
+		<div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+			<h2 class="w3-wide w3-center">LOG INFO</h2>
+			<p class="w3-opacity w3-center"><i>Information on most recent intruders</i></p><br>
+			<div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+				<div class="w3-third w3-margin-bottom">
+                    <img id="intruder1" src="http://192.168.137.66:8080/getIntruderImage/1" width="245" height="150">
+					<div class="w3-container w3-white">
+						<p><b>Intruder 1</b></p>
+						<p id="Time1">Fri 27 Nov 2016</p>
+
+					</div>
+				</div>
+				<div class="w3-third w3-margin-bottom">
+					<img id="intruder2" src="http://192.168.137.66:8080/getIntruderImage/2"  width="245" height="150">
+					<div class="w3-container w3-white">
+						<p><b>Intruder 2</b></p>
+						<p id="Time2">Sat 28 Nov 2016</p>
+
+					</div>
+				</div>
+				<div class="w3-third w3-margin-bottom">
+					<img id="intruder3" src="http://192.168.137.66:8080/getIntruderImage/3"  width="245" height="150">
+					<div class="w3-container w3-white">
+						<p><b>Intruder 3</b></p>
+						<p id="Time3">Sun 29 Nov 2016</p>
+
+					</div>
+				</div>
+				<div class="w3-third w3-margin-bottom">
+					<img id="intruder4" src="http://192.168.137.66:8080/getIntruderImage/4"  width="245" height="150">
+					<div class="w3-container w3-white">
+						<p><b>Intruder 4</b></p>
+						<p id="Time4">Sun 29 Nov 2016</p>
+
+					</div>
+				</div>
+				<div class="w3-third w3-margin-bottom">
+					<img id="intruder5" src="http://192.168.137.66:8080/getIntruderImage/5"  width="245" height="150">
+					<div class="w3-container w3-white">
+						<p><b>Intruder 5</b></p>
+						<p id="Time5">Sun 29 Nov 2016</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+	<a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/" target="_blank" ></a>
+	<a class="fa fa-instagram w3-hover-opacity"></a>
+	<a class="fa fa-snapchat w3-hover-opacity"></a>
+	<a class="fa fa-pinterest-p w3-hover-opacity"></a>
+	<a class="fa fa-twitter w3-hover-opacity"></a>
+	<a class="fa fa-linkedin w3-hover-opacity"></a>
+	</footer>
+</body>
+
+<script language = "javascript" type="text/javascript">
+$(document).ready(
+  function() {
+//get recent snapshot
+setInterval(function() {
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getImage',
+    success: function(data) {
+	  var recentTime = document.getElementById("recentTime");
+	  var d = new Date();
+      var snapshot = document.getElementById("snapshot");
+      snapshot.src = 'http://192.168.137.66:8080/getImage';
+	  recentTime.innerHTML="Last Updated: " + d.toLocaleString();
+    }
+  });
+}, 10000);
+//get recent intruder image
+setInterval(function() {
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderImage/1',
+    success: function(data) {
+	  var intrudeTime = document.getElementById("intrudeTime");
+	  var d = new Date();
+      var snapshot = document.getElementById("intruder0");
+      snapshot.src = 'http://192.168.137.66:8080/getIntruderImage/1';
+	  intrudeTime.innerHTML="Last Updated: " + d.toLocaleString();
+    }
+  });
+}, 10000);
+// Get intruder images
+setInterval(function() {
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderImage/1',
+    success: function(data) {
+      var snapshot = document.getElementById("intruder1");
+      snapshot.src = 'http://192.168.137.66:8080/getIntruderImage/1';
+    }
+  });
+
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderTime/1',
+    success: function(data) {
+      var label = document.getElementById("Time1");
+      label.innerHTML = data;
+      console.log("test");
+    }
+  });
+}, 10000);
+
+setInterval(function() {
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderImage/2',
+    success: function(data) {
+      var snapshot = document.getElementById("intruder2");
+      snapshot.src = 'http://192.168.137.66:8080/getIntruderImage/2';
+    }
+  });
+
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderTime/2',
+    success: function(data) {
+      var label = document.getElementById("Time2");
+      label.innerHTML = data;
+      console.log("test");
+    }
+  });
+
+}, 10000);
+
+setInterval(function() {
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderImage/3',
+    success: function(data) {
+      var snapshot = document.getElementById("intruder3");
+      snapshot.src = 'http://192.168.137.66:8080/getIntruderImage/3';
+    }
+  });
+
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderTime/3',
+    success: function(data) {
+      var label = document.getElementById("Time3");
+      label.innerHTML = data;
+      console.log("test");
+    }
+  });
+}, 10000);
+
+setInterval(function() {
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderImage/4',
+    success: function(data) {
+      var snapshot = document.getElementById("intruder4");
+      snapshot.src = 'http://192.168.137.66:8080/getIntruderImage/4';
+    }
+  });
+
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderTime/4',
+    success: function(data) {
+      var label = document.getElementById("Time4");
+      label.innerHTML = data;
+      console.log("test");
+    }
+  });
+
+}, 10000);
+
+setInterval(function() {
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderImage/5',
+    success: function(data) {
+      var snapshot = document.getElementById("intruder5");
+      snapshot.src = 'http://192.168.137.66:8080/getIntruderImage/5';
+    }
+  });
+
+  $.ajax({
+    url: 'http://192.168.137.66:8080/getIntruderTime/5',
+    success: function(data) {
+      var label = document.getElementById("Time5");
+      label.innerHTML = data;
+      console.log("test");
+    }
+  });
+
+}, 10000);
+
+
+}
+);
+</script>
+
+</html>

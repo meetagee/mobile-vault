@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>About Us</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style>
+body {
+background-image: url(https://pathwayvineyard.com/wp-content/uploads/2018/03/contact-background.jpg);
+background-size: cover;
+font-family: "Lato", sans-serif;
+}
+.mySlides {display: none}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.tbody {
+  height: 50px !important;
+  overflow-y: scroll;
+}
+
+.my-tbody {
+  height:30px;
+  display:block;
+  overflow-y:scroll;
+  width:100%;
+}
+
+tbody {
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+}
+
+td {
+  width: 33.33%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<body>
+	<!-- Navbar -->
+  <div class="w3-top">
+		<div class="w3-bar w3-black w3-card">
+			<a href="http://192.168.137.66:8080/home/" class="w3-bar-item w3-button w3-padding-large">
+				<i class="fa fa-home"></i>
+				HOME
+			</a>
+			<a href="http://192.168.137.66:8080/lockmanage/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+				<i class="fa fa-cog"></i>
+				LOCK MANAGEMENT
+			</a>
+			<a href="http://192.168.137.66:8080/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+				<i class="fa fa-phone"></i>
+				CONTACT
+			</a>
+			<a href="http://192.168.137.66:8080/aboutus" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+				<i class="fa fa-user-o"></i>
+				ABOUT US</a>
+		</div>
+	</div>
+
+	<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="screenshot">
+		<h2 class="w3-wide">OUR TEAM</h2>
+		<p class="w3-opacity"><i>We are the group A18 of CPEN291 - 2019W. </i></p>
+		<div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+			<div class="w3-third w3-margin-bottom">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj7Mp2pGgNbrKSw5drexnJWrpXMoQU-7eTfdSuOP5tsqrqlmDA-w" alt="" style="width:100%" class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Lam Hoang</b></p>
+					<p class="w3-opacity">2nd Year CPEN Student</p>
+					<p>Front-end Developer</p>
+					<p>lamht1998@gmail.com</p>
+				</div>
+			</div>
+			<div class="w3-third w3-margin-bottom">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj7Mp2pGgNbrKSw5drexnJWrpXMoQU-7eTfdSuOP5tsqrqlmDA-w" alt="" style="width:100%" class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Tung Le</b></p>
+					<p class="w3-opacity">2nd Year CPEN Student</p>
+					<p>Front-end Developer</p>
+					<p>tungdjack@gmail.com</p>
+				</div>
+			</div>
+			<div class="w3-third w3-margin-bottom">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj7Mp2pGgNbrKSw5drexnJWrpXMoQU-7eTfdSuOP5tsqrqlmDA-w" alt="" style="width:100%" class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Shawn Zhou</b></p>
+					<p class="w3-opacity">2nd Year CPEN Student</p>
+					<p>Back-end Developer</p>
+					<p> <br></br> </p>
+				</div>
+			</div>
+			<div class="w3-third w3-margin-bottom">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj7Mp2pGgNbrKSw5drexnJWrpXMoQU-7eTfdSuOP5tsqrqlmDA-w" alt="" style="width:100%" class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Yon Zhou</b></p>
+					<p class="w3-opacity">2nd Year CPEN Student</p>
+					<p>Back-end Developer</p>
+					<p>yonzhouschool@gmail.com</p>
+				</div>
+			</div>
+			<div class="w3-third w3-margin-bottom">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj7Mp2pGgNbrKSw5drexnJWrpXMoQU-7eTfdSuOP5tsqrqlmDA-w" alt="" style="width:100%" class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Lemuel Pranoto</b></p>
+					<p class="w3-opacity">2nd Year CPEN Student</p>
+					<p>Hardware Designer</p>
+					<p>lemuelmpranoto@gmail.com</p>
+				</div>
+			</div>
+			<div class="w3-third w3-margin-bottom">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj7Mp2pGgNbrKSw5drexnJWrpXMoQU-7eTfdSuOP5tsqrqlmDA-w" alt="" style="width:100%" class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Lingye Kong</b></p>
+					<p class="w3-opacity">2nd Year CPEN Student</p>
+					<p>Hardware Designer</p>
+					<p>jadenk0103@gmail.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="w3-black" id="log">
+		<div class="w3-container w3-center w3-content w3-padding-64" style="max-width:800px">
+			<h2 class="w3-wide">OUR PRODUCT</h2>
+			<p class="w3-opacity"><i> Mobile Vault </i></p>
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+			  <div class="carousel-inner">
+				<div class="carousel-item active">
+				  <img class="d-block w-100" src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/55847303_2498028733541147_8741838497108721664_n.jpg?_nc_cat=110&_nc_eui2=AeHPDQVTMUvvJ_JloFvAGsKj4vA_CdEeyPeqj18TxQOwTak5SWu-gOvM2IzKrmVTWnD0WrPyYc_HUQGxpSe1al2Dtl_iTMbNCz0vLW8qPGkOag&_nc_ht=scontent-sea1-1.xx&oh=6a48b0a258adc6bb7b958ba11c756073&oe=5D4FE9EB">
+				</div>
+				<div class="carousel-item">
+				  <img class="d-block w-100" src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/55686820_816917738667658_1606003325558325248_n.jpg?_nc_cat=111&_nc_eui2=AeHY0HKkNpo-fLc9eZyNVu0U-Z9ETaHJ0tQOC7EzVhxmTjLOmewfRVmgXzAcZL5AYvy_rGiPh2XUnCxq7KPQh-s91qRlqgK5KQvsEu8nT0-vPA&_nc_ht=scontent-sea1-1.xx&oh=9b2c75f74eec1b3a15a691dbcecc6ceb&oe=5D0B29AE">
+				</div>
+				<div class="carousel-item">
+				  <img class="d-block w-100" src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/55719254_1179895068853592_7783072110104018944_n.jpg?_nc_cat=105&_nc_eui2=AeHtziD75p0SAxSAFtEMlP8GzP4Y4I7CXAzKTGYe_znnkGHS2JuTCtIadG7858IeoHEbPYGpD0VOztY6XU3JrGSbVijB2pxpf7OGy9yfLCGQsg&_nc_ht=scontent-sea1-1.xx&oh=bceff5ab901217d3fac0e89697155372&oe=5D470095">
+				</div>
+			  </div>
+			</div>
+			<br></br>
+			<p class="w3-second">Our project - <b><em>Mobile Vault</em></b> is a highly-secured system that can be applied in daily needs for security. The system can be controlled via Internet. It includes a controlled-lock; alert systems and simple lock interface for users.</p>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+	<a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/" target="_blank" ></a>
+	<a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com" target="_blank"></a>
+	<a class="fa fa-snapchat w3-hover-opacity" href="https://www.snapchat.com" target="_blank"></a>
+	<a class="fa fa-pinterest-p w3-hover-opacity" href="https://www.pinterest.com" target="_blank"></a>
+	<a class="fa fa-twitter w3-hover-opacity" href="https://twitter.com/" target="_blank"></a>
+	<a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/" target="_blank"></a>
+	</footer>
+</body>
+</html>

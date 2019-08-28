@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Lock Management</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+body {
+font-family: "Lato", sans-serif;
+background-image: url(https://wallpaperplay.com/walls/full/0/0/c/180436.jpg);
+background-size: cover;
+}
+.mySlides {display: none}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.tbody {
+  height: 50px !important;
+  overflow-y: scroll;
+}
+
+.my-tbody {
+  height:30px;
+  display:block;
+  overflow-y:scroll;
+  width:100%;
+}
+
+tbody {
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+}
+
+td {
+  width: 33.33%;
+}
+
+#pwd {
+    width: 200px;
+	margin:auto;
+    text-align: center;
+}
+</style>
+
+<body>
+	<!-- Navbar -->
+	<div class="w3-top">
+		<div class="w3-bar w3-black w3-card">
+			<a href="http://192.168.137.66:8080/home/" class="w3-bar-item w3-button w3-padding-large">
+				<i class="fa fa-home"></i>
+				HOME
+			</a>
+			<a href="http://192.168.137.66:8080/lockmanage/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+				<i class="fa fa-cog"></i>
+				LOCK MANAGEMENT
+			</a>
+			<a href="http://192.168.137.66:8080/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+				<i class="fa fa-phone"></i>
+				CONTACT
+			</a>
+			<a href="http://192.168.137.66:8080/aboutus" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+				<i class="fa fa-user-o"></i>
+				ABOUT US</a>
+		</div>
+	</div>
+
+	<div class="w3-container w3-center w3-padding-64" id="screenshot">
+		<h2 class="w3-wide">SYSTEM STATISTICS</h2>
+		<p class="w3-opacity"><i>Most updated statistics of your system</i></p>
+		<br></br>
+		<!-- Page content -->
+		<div class="row">
+			<div class="column">
+				<h2 class="display-4">LOCK STATUS</h2>
+				<h3 id="lockStatus"><span class="w3-tag w3-red w3-margin-center"></span></h3>
+				<p id="locktime" class="w3-opacity"> Last updated: </p>
+			</div>
+			<div class="column">
+				<h2 class="display-4">ALARM STATUS</h2>
+				<h3 id="alarmstatus"><span class="w3-tag w3-red w3-margin-center"></span></h3>
+				<p id="alarmtime" class="w3-opacity"> Last updated: </p>
+			</div>
+			<div class="column">
+				<h2 class="display-4">CURRENT PASSCODE</h2>
+				<h3 id="password-id"><span class="w3-tag w3-pale-yellow w3-margin-center"></span></h3>
+				<p id="pwdtime" class="w3-opacity"> Last updated: </p>
+			</div>
+		</div>
+	</div>
+
+	<div class="w3-container w3-center w3-padding-64 w3-black" id="screenshot">
+		<h2 class="w3-wide">SYSTEM CONTROL</h2>
+		<p class="w3-opacity"><i>Control your system</i></p>
+		<br></br>
+		<!-- Page content -->
+		<div class="row">
+			<div class="column1">
+				<h2 class="display-4">LOCK CONTROL </h2>
+				<p><button onclick="releaseLock()" class="w3-button w3-red w3-round-xlarge">RELEASE</button></p>
+				<p><button onclick="lockLock()" class="w3-button w3-green w3-round-xlarge">LOCK</button></p>
+            </div>
+			<div class="column1">
+				<h2 class="display-4">CHANGE PASSCODE</h2>
+				<div class="form-group">
+					<label for="pwd">New passcode:</label>
+					<input type="password" maxlength = "4" class="form-control" id="pwd" placeholder="Enter new passcode"name="newPwd">
+				</div>
+				<p><button onclick="changePass()" class="w3-button w3-blue w3-round-xlarge">SUBMIT</button></p>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+	<a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/" target="_blank" ></a>
+	<a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com" target="_blank"></a>
+	<a class="fa fa-snapchat w3-hover-opacity" href="https://www.snapchat.com" target="_blank"></a>
+	<a class="fa fa-pinterest-p w3-hover-opacity" href="https://www.pinterest.com" target="_blank"></a>
+	<a class="fa fa-twitter w3-hover-opacity" href="https://twitter.com/" target="_blank"></a>
+	<a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/" target="_blank"></a>
+	</footer>
+</body>
+
+
+<script language = "javascript" type="text/javascript">
+$(document).ready(
+  function(){
+    setInterval(
+      function() {
+        $.ajax({
+          url: "http://192.168.137.66:8080/getDoorStatus",
+          success: function(data) {
+            var lockStatus = document.getElementById("lockStatus");
+			var locktime = document.getElementById("locktime");
+			var d = new Date();
+            if (data == "on") {
+              lockStatus.innerHTML = "LOCKED";
+            } else {
+              lockStatus.innerHTML = "UNLOCKED";
+            }
+			locktime.innerHTML="Last Updated: " + d.toLocaleString();
+          }
+        });
+        $.ajax({
+          url: "http://192.168.137.66:8080/getIntruderStatus",
+          success: function(data) {
+            var alarm = document.getElementById("alarmstatus");
+			var alarmtime = document.getElementById("alarmtime");
+			var d = new Date();
+            if (data == "on") {
+              alarm.innerHTML = "ON";
+            } else {
+              alarm.innerHTML = "OFF";
+            }
+			alarmtime.innerHTML="Last Updated: " + d.toLocaleString();
+          }
+        });
+        $.ajax({
+          url: "http://192.168.137.66:8080/getPassword",
+          success: function(data) {
+            var password = document.getElementById("password-id");
+			var pwdtime = document.getElementById("pwdtime");
+			var d = new Date();
+            password.innerHTML = data;
+			pwdtime.innerHTML="Last Updated: " + d.toLocaleString();
+          }
+        });
+      }, 2000
+    );
+  }
+);
+</script>
+<script>
+    function releaseLock() {
+        $.ajax(
+        {
+            url : "http://192.168.137.66:8080/sendDoorStatusOff"
+        }
+        );
+    }
+</script>
+
+<script>
+    function lockLock() {
+        $.ajax(
+        {
+            url : "http://192.168.137.66:8080/sendDoorStatusOn"
+        }
+        );
+    }
+</script>
+
+<script>
+    function changePass() {
+        var password = document.getElementById("pwd").value;
+        $.ajax(
+        {
+            url : "http://192.168.137.66:8080/updatePassword/" + password
+        }
+        );
+    }
+</script>
+
+</html>
